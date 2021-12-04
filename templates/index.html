@@ -11,42 +11,57 @@
 </head>
 
 <body>
-    <h3>Titanic Prediction Form</h3>
+    <h3>Titanic Survival Prediction Form</h3>
  
 <div>
   <form action="/predict" method="POST">
-    <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <label for="age"><big>What is your age?</big></label>
+    
+    <br>
+    <input type="text"  id="age" name="age">
     <br>
 	<br>
-	<label for="pclass">passenger_class</label>
-    <input type="text" id="pclass" name="pclass">
+	<label for="pclass"><big>What is your passenger class?</big></label>
     <br>
-	  <br>
-    <label for="gender">Gender</label>
+    <font color="black">
+    <select id="pclass" name="pclass">
+        <option value="0"> </option>
+        <option value="1">First Class</option>
+        <option value="2">Second Class</option>
+        <option value="3">Third Class</option>
+    </select>  
+    </font> 
+
+    <br>
+	<br>
+    <label for="gender"><big>What is your gender?</big></label>
+    <br>
+    <font color="black">
 	<select id="gender" name="gender">
-      <option value="0">Female</option>
-      <option value="1">Male</option>
+        <option value="0"> </option>  
+        <option value="1">Female</option>
+        <option value="2">Male</option>
     </select>
+    </font>
 	<br>
-	 <label for="parch">Parch</label>
+    <br>
+	<label for="parch"><big>How many parents and children are travelling with you?</big></label>
+    <br>
     <input type="text" id="parch" name="parch">
     <br>
-	
-	
-	 <label for="sibsp">Sibsp</label>
+    <br>
+	<label for="sibsp"><big>How many siblings and spouse are travelling with you?</big></label>
+    <br>
     <input type="text" id="sibsp" name="sibsp">
     <br>
-
     <br>
-	<label for="fare">Fare</label>
+	<label for="fare"><big>What was the cost of your fare?</big></label>
+    <br>
     <input type="text" id="fare" name="fare">
     <br>
-    
-
-
     <br>
     <input type="submit" value="Submit">
+  </form>
   </form>
 </div>
 </body>

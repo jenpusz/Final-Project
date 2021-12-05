@@ -13,12 +13,12 @@
 <body style="background-color: lightgray;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand bg-info text-white p-2 rounded fw-bold" href="#">The Titanic</a>
+      <a class="navbar-brand bg-info text-white p-2 rounded fw-bold"  href="./index.html">The Titanic</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-<!--      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <!--     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
           <li class="nav-item dropdown">
@@ -36,11 +36,13 @@
               <li><a class="dropdown-item" href="./vis7.html">7</a></li>            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./comparison.html">Comparison</a>
+            <a class="nav-link active" aria-current="page" href="comparison.html">Comparison</a>
           </li>
- -->   
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="data.html">Data</a>
+          </li>
         </ul>
-      </div>
+         </div>-->  
     </div>
   </nav>
 
@@ -48,68 +50,15 @@
     <div class="row">
 
       <div class="col-md-6 bg-white p-4">
-        <h2 class="text-info fw-bold">Would You have survived the Titanic</h2>
+        <h2 class="text-info fw-bold">Passanger Survival by Parent-Child Count</h2>
         <hr>
-        <img src="../images/titanic.png" alt="" class="w-100 float-start">
+        <img src="../images/Passanger Survival by Parent-Child Count.png" alt="" class="w-100">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente nihil itaque enim exercitationem, deserunt
           iste omnis molestias doloremque suscipit officia? Architecto quos harum a saepe.</p>
         <p>Odit sed nam dolorem nisi in odio necessitatibus id consequatur doloribus vel soluta accusamus quae ad
           temporibus, voluptatum tempore hic iure porro! Quae, veritatis iusto!. Odit sed nam dolorem nisi in odio
           necessitatibus id consequatur doloribus vel soluta accusamus quae ad temporibus, voluptatum tempore hic iure
           porro! Quae, veritatis iusto!</p>
-          <div>
-            <form action="/predict" method="POST">
-              <br><label for="age"><big>What is your age?</big></label>
-              
-              <br>
-              <input type="text"  id="age" name="age">
-              <br>
-            <br>
-            <label for="pclass"><big>What is your passenger class?</big></label>
-              <br>
-              <font color="black">
-              <select id="pclass" name="pclass">
-                  <option value="0"> </option>
-                  <option value="1">First Class</option>
-                  <option value="2">Second Class</option>
-                  <option value="3">Third Class</option>
-              </select>  
-              </font> 
-          
-              <br>
-            <br>
-              <label for="gender"><big>What is your gender?</big></label>
-              <br>
-              <font color="black">
-            <select id="gender" name="gender">
-                  <option value="0"> </option>  
-                  <option value="1">Female</option>
-                  <option value="2">Male</option>
-              </select>
-              </font>
-            <br>
-              <br>
-            <label for="parch"><big>How many parents and children are travelling with you?</big></label>
-              <br>
-              <input type="text" id="parch" name="parch">
-              <br>
-              <br>
-            <label for="sibsp"><big>How many siblings and spouse are travelling with you?</big></label>
-              <br>
-              <input type="text" id="sibsp" name="sibsp">
-              <br>
-              <br>
-            <label for="fare"><big>What was the cost of your fare?</big></label>
-              <br>
-              <input type="text" id="fare" name="fare">
-              <br>
-              <br>
-              <input type="submit" value="Submit">
-            </form>
-            </form>
-          </div>
-
-
       </div>
 <div class="col-md-1 m-0 p-0"></div>
       <div class="col-md-5 bg-white p-4">
@@ -131,53 +80,8 @@
               src="../images/Passanger Survival by Fare.png" alt="" class="w-100"></a><a
             href="vis7.html" class="col-md-6 border"><img
               src="../images/Passanger Survival by Port of Embarkment.png" alt="" class="w-100"></a></div>
-   
-            </div>
-      <div class="container mb-2"><br><br><br><br>
-        <h1>The Team</h1><hr><br> 
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/arnazalavi&quot;)">
-                <img src="../images/f.png" alt="Arnaz" width="140" height="140" class="rounded-circle">
-                <h4>Arnaz Alavi</h4>
-                <p>role description</p>
-            </div>
-            <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/ratikachauhan&quot;)">
-                <img src="../images/f.png" alt="Rahtika" width="140" height="140" class="rounded-circle">
-                <h4>Ratika Chauhan</h4>
-                <p>role description</p>
-            </div>
-            <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/JYIsaacquot;)">
-                <img src="../images/f.png" alt="Jo" width="140" height="140" class="rounded-circle">
-                <h4>Jo Isaac</h4>
-                <p>role description</p>
-            </div>
-            <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/jenpusz&quot;)">
-                <img src="../images/f.png" alt="Jenifer" width="140" height="140" class="rounded-circle">
-                <h4>Jenifer Puszczewicz</h4>
-                <p>role descriptionr</p>
-            </div>
-
-            <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/rutili&quot;)">
-                <img src="../images/f.png" alt="Joe" width="140" height="140" class="rounded-circle">
-                <h4>Joe Rutili</h4>
-                <p>Role Descriptionn</p>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        <br>
+      </div>
     </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
 
   </div>
   </div>

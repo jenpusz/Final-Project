@@ -13,7 +13,7 @@
 <body style="background-color: lightgray;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand bg-info text-white p-2 rounded fw-bold" href="Home">The Titanic</a>
+      <a class="navbar-brand bg-info text-white p-2 rounded fw-bold" href="home">The Titanic</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,8 +38,15 @@
           porro! Quae, veritatis iusto!</p>
           <div>
             <form action="/predict" method="POST">
+             <br>
+              <label for="Model_Pick">Please_Pick_model</label>
+              <select id="Pick_model" name="Pick_model">
+                  <option value="0">Logistic Regression</option>
+                  <option value="1">SVM</option>
+                </select>
+                <br>            
+
               <br><label for="age"><big>What is your age?</big></label>
-              
               <br>
               <input type="text"  id="age" name="age">
               <br>

@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 
 def ValuePredictor_LR(final_input):
-    col_list = ["pclass",	"sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
+    col_list = ["pclass", "sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
     #model_LogisticRegression = pickle.load('titanicData.pkl')
     #titanicData_Scaler.pkl
     print(final_input)
@@ -118,7 +118,13 @@ def predict():
     
     titanic_data= {}
     titanic_data['age'] = age
-    titanic_data['Passenger_Class'] =pclass
+    if pclass == 1:
+        titanic_data['Passenger_Class'] = First Class
+    elif pclass == 2:
+        titanic_data['Passenger_Class'] = Second Class
+    else:
+        titanic_data['Passenger_Class'] = Third Class
+    #titanic_data['Passenger_Class'] =pclass
     if gender == 0:
         titanic_data['Sex'] = 'Female'
     else: titanic_data['Sex'] = 'Male'

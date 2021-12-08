@@ -3,8 +3,6 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import pandas as pd
 
-
-
 app = Flask(__name__)
 
 def ValuePredictor_LR(final_input):

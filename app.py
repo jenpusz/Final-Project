@@ -133,7 +133,7 @@ def predict():
         titanic_data['model'] = 'SVM'
 
    
-    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER CLASS':[pclass],'SEX':[gender],'NUMBER OF PARENTS AND CHILDREN TRAVELLING':[parch],'NUMBER OF SIBLINGS AND SPOUSE TRAVELLING':[sibsp],'FARE PAID':[fare],'PREDICTION':[prediction_LR]})
+    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER CLASS':[pclass],'SEX':[gender],'NUMBER OF PARENTS AND CHILDREN TRAVELLING WITH YOU':[parch],'NUMBER OF SIBLINGS AND SPOUSE TRAVELLING WITH YOU':[sibsp],'FARE PAID':[fare],'PREDICTION':[prediction_LR]})
     print(titanic_outputdata)
 
     #return pred

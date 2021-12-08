@@ -93,7 +93,8 @@ def predict():
     print(sibsp)
 
     print(fare)
-    new_titanic_data =[age,pclass,gender,parch,sibsp,fare]
+    #new_titanic_data =[age,pclass,gender,parch,sibsp,fare]
+    new_titanic_data =[pclass,age,sibsp,parch,fare,gender]
     #ValuePredictor_LR(new_titanic_data)
     #return jsonify(age)
     #return jsonify(new_titanic_data)
@@ -119,8 +120,9 @@ def predict():
     titanic_data['age'] = age
     titanic_data['Passenger_Class'] =pclass
     if gender == 0:
-        titanic_data['Sex'] = 'Male'
-    else: titanic_data['Sex'] = 'Female'
+        titanic_data['Sex'] = 'Female'
+    else: titanic_data['Sex'] = 'Male'
+
     titanic_data['parch']= parch
     titanic_data['sibsp'] = sibsp
     titanic_data['Fare'] =fare
@@ -139,11 +141,11 @@ def predict():
     #return render_template('results.html',pred=pred)
     #return render_template('results.html',prediction_LR='Survival prediction {}'.format(Final_output))
     #return render_template('results.html',prediction_LR=titanic_outputdata)
-  
-    if prediction_LR =='Not Survived':
-        return render_template('results.html',prediction_model=titanic_data)
-    else: 
-        return render_template('results1.html',prediction_model=titanic_data)
+    return render_template('results.html',prediction_model=titanic_data)
+   # if prediction_LR =='Not Survived':
+       # return render_template('results.html',prediction_model=titanic_data)
+   # else: 
+       # return render_template('results1.html',prediction_model=titanic_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

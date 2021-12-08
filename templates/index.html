@@ -59,19 +59,21 @@
         <div>
             <form action="/predict" method="POST">
              <br>
-              <label for="Model_Pick"><big>Please_Pick_model</big></label>
+              <label for="Model_Pick">Which model would you like to try?</label>
+              <br>
               <select id="Pick_model" name="Pick_model">
-                  <option value="0">Logistic Regression</option>
-                  <option value="1">SVM</option>
+                  <option value="0"> </option>
+                  <option value="1">Logistic Regression</option>
+                  <option value="2">SVM</option>
                 </select>
                 <br>            
-
-              <br><label for="age"><big>What is your age?</big></label>
+              <br>
+              <label for="age">What is your age?</label>
               <br>
               <input type="text"  id="age" name="age">
               <br>
             <br>
-            <label for="pclass"><big>What is your passenger class?</big></label>
+            <label for="pclass">What is your passenger class?</label>
               <br>
               <font color="black">
               <select id="pclass" name="pclass">
@@ -84,7 +86,7 @@
           
               <br>
             <br>
-              <label for="gender"><big>What is your gender?</big></label>
+              <label for="gender">What is your gender?</label>
               <br>
               <font color="black">
             <select id="gender" name="gender">
@@ -95,17 +97,17 @@
               </font>
             <br>
               <br>
-            <label for="parch"><big>How many parents and children are travelling with you?</big></label>
+            <label for="parch">How many parents and children are travelling with you?</label>
               <br>
               <input type="text" id="parch" name="parch">
               <br>
               <br>
-            <label for="sibsp"><big>How many siblings and spouse are travelling with you?</big></label>
+            <label for="sibsp">How many siblings and spouse are travelling with you?</label>
               <br>
               <input type="text" id="sibsp" name="sibsp">
               <br>
               <br>
-            <label for="fare"><big>What was the cost of your fare?</big></label>
+            <label for="fare">What was the cost of your fare?</label>
               <br>
               <input type="text" id="fare" name="fare">
               <br>

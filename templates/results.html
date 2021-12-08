@@ -14,9 +14,8 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   </head>
-</head>
+
 <body>
   
 
@@ -42,7 +41,7 @@
   <div class="col-md-12">
     <br>
     <br>
-    <h1> <b class=center>                                                                                                 Would you have Survived the Titanic? </b>  </h1>
+    <h1> <b>                                                                                                 Would you have Survived the Titanic? </b>  </h1>
     <br>
     <br>
 
@@ -54,22 +53,24 @@
   <div class="col-md-12">
   <table class="table"> 
     <tr>
-    <th><H1>AGE</H1></th>
-    <th><H1>PASSENGER CLASS</H1></th>
-    <th><H1>SEX</H1></th>
-    <th><H1>PARENT AND/OR CHILD</H1></th>
-    <th><H1>SIBLING AND/OR SPOUSE</H1></th>
-    <th><H1>FARE</H1></th>
-    <th><H1>PREDICTION</H1></th>
-  </tr>
-<tr>
-  <td><H1>{{prediction_model.age}}</H1></td>
-  <td><H1>{{prediction_model.Passenger_Class}}</H1></td>
-  <td><H1>{{prediction_model.Sex}}</H1></td>
-  <td><H1>{{prediction_model.parch}}</H1></td>
-  <td><H1>{{prediction_model.sibsp}}</H1></td>
-  <td><H1>{{prediction_model.Fare}}</H1></td>
-  <td><H1>{{prediction_model.Prediction}}</H1></td>
+      <th>Model</th>
+      <th>AGE</th>
+      <th>PASSENGER CLASS</th>
+      <th>SEX</th>
+      <th>PARCH</th>
+      <th>SIBBLING  </th>
+      <th>FARE</th>
+      <th>PREDICTION</th>
+    </tr>
+  <tr>
+    <td> {{prediction_model.model}}</td>
+    <td> {{prediction_model.age}}</td>
+    <td>{{prediction_model.Passenger_Class}}</td>
+    <td>{{prediction_model.Sex}}</td>
+    <td>{{prediction_model.parch}}</td>
+    <td>{{prediction_model.sibsp}}</td>
+    <td>{{prediction_model.Fare}}</td>
+    <td>{{prediction_model.Prediction}}</td>
 
 </tr>
   </table>

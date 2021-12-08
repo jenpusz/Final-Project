@@ -114,14 +114,22 @@ def predict():
     else:
         prediction_LR= 'Survived'
 
+    
     titanic_data= {}
     titanic_data['age'] = age
     titanic_data['Passenger_Class'] =pclass
-    titanic_data['Sex'] =gender
+    if gender == 0:
+        titanic_data['Sex'] = 'Male'
+    else: titanic_data['Sex'] = 'Female'
     titanic_data['parch']= parch
     titanic_data['sibsp'] = sibsp
     titanic_data['Fare'] =fare
     titanic_data['Prediction'] =prediction_LR
+    if pickModel == 0:
+         titanic_data['model'] ='Logical Regression'
+    else: 
+        titanic_data['model'] = 'SVM'
+
    
     titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER_CLASS':[pclass],'SEX':[gender],'PARCH':[parch],'SIBBLING':[sibsp],'FARE':[fare],'PREDICTION':[prediction_LR]})
     print(titanic_outputdata)

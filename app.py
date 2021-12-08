@@ -119,11 +119,11 @@ def predict():
     titanic_data= {}
     titanic_data['age'] = age
     if pclass == 1:
-        titanic_data['Passenger_Class'] = First Class
+        titanic_data['Passenger_Class'] = 'First Class'
     elif pclass == 2:
-        titanic_data['Passenger_Class'] = Second Class
+        titanic_data['Passenger_Class'] = 'Second Class'
     else:
-        titanic_data['Passenger_Class'] = Third Class
+        titanic_data['Passenger_Class'] = 'Third Class'
     #titanic_data['Passenger_Class'] =pclass
     if gender == 0:
         titanic_data['Sex'] = 'Female'

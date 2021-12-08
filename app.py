@@ -67,8 +67,6 @@ def vis6():
 def vis7():
     return render_template('vis7.html')
 
-
-
 @app.route('/predict',methods=['GET','POST'])
 def predict():
 
@@ -125,7 +123,6 @@ def predict():
     titanic_data['Fare'] =fare
     titanic_data['Prediction'] =prediction_LR
    
-
     titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER_CLASS':[pclass],'SEX':[gender],'PARCH':[parch],'SIBBLING':[sibsp],'FARE':[fare],'PREDICTION':[prediction_LR]})
     print(titanic_outputdata)
 
@@ -134,8 +131,11 @@ def predict():
     #return render_template('results.html',pred=pred)
     #return render_template('results.html',prediction_LR='Survival prediction {}'.format(Final_output))
     #return render_template('results.html',prediction_LR=titanic_outputdata)
-    return render_template('results.html',prediction_model=titanic_data)
-
+  
+    if prediction_LR =='Not Survived':
+        return render_template('results.html',prediction_model=titanic_data)
+    else: 
+        return render_template('results1.html',prediction_model=titanic_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

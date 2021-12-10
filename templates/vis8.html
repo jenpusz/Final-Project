@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+
+<body style="background-color: lightgray;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand bg-info text-white p-2 rounded fw-bold"  href="/home">The Titanic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+    </div>
+  </nav>
+
+  <div style="width: 95%;" class="container-fluid mt-4 m-auto">
+    <div class="row">
+
+      <div class="col-md-6 bg-white p-4">
+        <h2 class="text-info fw-bold">Passanger Survival by Port of Embarkment</h2>
+        <hr>
+        <img src="../static/img/survivor_dist_by_sex.png" alt="" class="w-100">
+        <p> Examining the survival rate based on port of embarkment is interesting from the standpoint of determining whether a particular region suffered greater losses.
+        Southhampton, UK boarded more passengers than Cherbourg Harbour, France and Queenstown, Ireland combined. Passengers boarding in France were more likely to survive
+        than perish, which is a likely indicator that those passengers were wealthier, and travelling with family, including women and children. From a percentage measure,
+        the Southhampton and Queenstown passengers were similar.</p>
+      </div>
+<div class="col-md-1 m-0 p-0"></div>
+      <div class="col-md-5 bg-white p-4">
+        <h1 class="text-info">Visualizations</h1>
+        <h6 class="text-info">Select a graph for detailed analysis.</h6>
+        <hr>
+        <div class="row">
+          <a href="/vis1" class="col-md-6 border "><img
+              src="../static/img/Passanger Survival by Age.png" alt="Age" class="w-100"></a><a
+            href="/vis2" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Parent-Child Count.png" alt="Parent-Child Count" class="w-100"></a><a
+            href="/vis3" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Sibling - Spouse Count Count.png" alt="Sibling-Spouse Count" class="w-100"></a><a
+            href="/vis4" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Sex.png" alt="Sex" class="w-100"></a><a
+            href="/vis5" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Ticket Class.png" alt="Ticket Class" class="w-100"></a><a
+            href="/vis6" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Fare.png" alt="Fare" class="w-100"></a><a
+            href="/vis7" class="col-md-6 border"><img
+              src="../static/img/Passanger Survival by Port of Embarkment.png" alt="Port of Embarkment" class="w-100"></a>
+            href="/vis8" class="col-md-6 border border-info"><img
+              src="../static/img/survivor_dist_by_sex.png" alt="Port of Embarkment" class="w-100"></a>
+            href="/vis9" class="col-md-6 border"><img
+              src="../static/img/survivor_dist_by_sexpclass.png" alt="Port of Embarkment" class="w-100"></a></div>
+            </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

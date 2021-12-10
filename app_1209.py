@@ -3,10 +3,12 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import pandas as pd
 
+
+
 app = Flask(__name__)
 
 def ValuePredictor_LR(final_input):
-    col_list = ["pclass", "sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
+    col_list = ["pclass",	"sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
     #model_LogisticRegression = pickle.load('titanicData.pkl')
     #titanicData_Scaler.pkl
     print(final_input)
@@ -35,37 +37,7 @@ def ValuePredictor_SVM(final_input):
 def index():
     return render_template('index.html')
 
-@app.route('/home')
-def home():
-    return render_template('index.html')
 
-@app.route('/vis1')
-def vis1():
-    return render_template('vis1.html')
-
-@app.route('/vis2')
-def vis2():
-    return render_template('vis2.html')
-
-@app.route('/vis3')
-def vis3():
-    return render_template('vis3.html')
-
-@app.route('/vis4')
-def vis4():
-    return render_template('vis4.html')
-
-@app.route('/vis5')
-def vis5():
-    return render_template('vis5.html')
-
-@app.route('/vis6')
-def vis6():
-    return render_template('vis6.html')
-
-@app.route('/vis7')
-def vis7():
-    return render_template('vis7.html')
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
@@ -83,6 +55,8 @@ def predict():
      parch = int(request.form["parch"])
      sibsp = int(request.form["sibsp"])
      fare = float(request.form["fare"])
+
+    
      print(pickModel)
 
     print(age)
@@ -93,7 +67,6 @@ def predict():
     print(sibsp)
 
     print(fare)
-    #new_titanic_data =[age,pclass,gender,parch,sibsp,fare]
     new_titanic_data =[pclass,age,sibsp,parch,fare,gender]
     #ValuePredictor_LR(new_titanic_data)
     #return jsonify(age)
@@ -110,11 +83,10 @@ def predict():
 
     Final_output = round(pred[0], 2)
     print(Final_output)
-    
 
     titanic_data= {}
     if Final_output == 0:
-         prediction_LR ='Perished'
+         prediction_LR ='Not Survived'
          titanic_data['image'] = "static/img/d5lqc9k-e681acff-5f1f-4a9f-9251-007f7a0f41df"
     else: 
         prediction_LR= 'Survived'
@@ -123,20 +95,12 @@ def predict():
         else:
             titanic_data['image'] = "static/img/titanic-survivors-lifeboat.jpg"
 
-    
-    
+   
     titanic_data['age'] = age
-    if pclass == 1:
-        titanic_data['Passenger_Class'] = 'First'
-    elif pclass == 2:
-        titanic_data['Passenger_Class'] = 'Second'
-    else:
-        titanic_data['Passenger_Class'] = 'Third'
-    #titanic_data['Passenger_Class'] =pclass
+    titanic_data['Passenger_Class'] =pclass
     if gender == 0:
         titanic_data['Sex'] = 'Female'
     else: titanic_data['Sex'] = 'Male'
-
     titanic_data['parch']= parch
     titanic_data['sibsp'] = sibsp
     titanic_data['Fare'] =fare
@@ -145,9 +109,9 @@ def predict():
          titanic_data['model'] ='Logical Regression'
     else: 
         titanic_data['model'] = 'SVM'
-
    
-    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER CLASS':[pclass],'SEX':[gender],'NUMBER OF PARENTS AND CHILDREN TRAVELLING WITH YOU':[parch],'NUMBER OF SIBLINGS AND SPOUSE TRAVELLING WITH YOU':[sibsp],'FARE PAID':[fare],'PREDICTION':[prediction_LR]})
+
+    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER_CLASS':[pclass],'SEX':[gender],'PARCH':[parch],'SIBBLING':[sibsp],'FARE':[fare],'PREDICTION':[prediction_LR]})
     print(titanic_outputdata)
 
     #return pred
@@ -156,10 +120,7 @@ def predict():
     #return render_template('results.html',prediction_LR='Survival prediction {}'.format(Final_output))
     #return render_template('results.html',prediction_LR=titanic_outputdata)
     return render_template('results.html',prediction_model=titanic_data)
-   # if prediction_LR =='Perished':
-       # return render_template('results.html',prediction_model=titanic_data)
-   # else: 
-       # return render_template('results1.html',prediction_model=titanic_data)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

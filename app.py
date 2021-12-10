@@ -67,8 +67,18 @@ def vis6():
 def vis7():
     return render_template('vis7.html')
 
+@app.route('/vis8')
+def vis8():
+    return render_template('vis8.html')
+
+@app.route('/vis9')
+def vis9():
+    return render_template('vis9.html')
+
+
 @app.route('/predict',methods=['GET','POST'])
 def predict():
+
 
     if request.method == 'POST':
      #parse form request in json format

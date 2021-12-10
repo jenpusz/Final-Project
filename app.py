@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 
 def ValuePredictor_LR(final_input):
-    col_list = ["pclass",	"sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
+    col_list = ["pclass", "sex",	"age"	,"sibsp" ,"	parch"	,"fare"]
     #model_LogisticRegression = pickle.load('titanicData.pkl')
     #titanicData_Scaler.pkl
     print(final_input)
@@ -111,14 +111,20 @@ def predict():
     Final_output = round(pred[0], 2)
     print(Final_output)
     if Final_output == 0:
-         prediction_LR ='Not Survived'
+         prediction_LR ='Perished'
     else:
         prediction_LR= 'Survived'
 
     
     titanic_data= {}
     titanic_data['age'] = age
-    titanic_data['Passenger_Class'] =pclass
+    if pclass == 1:
+        titanic_data['Passenger_Class'] = 'First'
+    elif pclass == 2:
+        titanic_data['Passenger_Class'] = 'Second'
+    else:
+        titanic_data['Passenger_Class'] = 'Third'
+    #titanic_data['Passenger_Class'] =pclass
     if gender == 0:
         titanic_data['Sex'] = 'Female'
     else: titanic_data['Sex'] = 'Male'
@@ -133,7 +139,7 @@ def predict():
         titanic_data['model'] = 'SVM'
 
    
-    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER_CLASS':[pclass],'SEX':[gender],'PARCH':[parch],'SIBBLING':[sibsp],'FARE':[fare],'PREDICTION':[prediction_LR]})
+    titanic_outputdata = pd.DataFrame({'AGE':[age], 'PASSENGER CLASS':[pclass],'SEX':[gender],'NUMBER OF PARENTS AND CHILDREN TRAVELLING WITH YOU':[parch],'NUMBER OF SIBLINGS AND SPOUSE TRAVELLING WITH YOU':[sibsp],'FARE PAID':[fare],'PREDICTION':[prediction_LR]})
     print(titanic_outputdata)
 
     #return pred
@@ -142,7 +148,7 @@ def predict():
     #return render_template('results.html',prediction_LR='Survival prediction {}'.format(Final_output))
     #return render_template('results.html',prediction_LR=titanic_outputdata)
     return render_template('results.html',prediction_model=titanic_data)
-   # if prediction_LR =='Not Survived':
+   # if prediction_LR =='Perished':
        # return render_template('results.html',prediction_model=titanic_data)
    # else: 
        # return render_template('results1.html',prediction_model=titanic_data)

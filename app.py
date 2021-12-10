@@ -115,7 +115,7 @@ def predict():
     titanic_data= {}
     if Final_output == 0:
          prediction_LR ='Perished'
-         titanic_data['image'] = "static/img/Shippicture.jpg"
+         titanic_data['image'] = "static/img/Shippicture.png"
     else: 
         prediction_LR= 'Survived'
         if gender == 1:
